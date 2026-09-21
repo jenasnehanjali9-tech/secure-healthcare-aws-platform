@@ -1,0 +1,9 @@
+infrastructure/.terraform/
+infrastructure/*.tfstate
+infrastructure/*.tfstate.backup
+infrastructure/.terraform.lock.hcl
+infrastructure/tfplan
+dashboard/.venv/
+__pycache__/
+*.pyc
+/tmp/dbcreds.json

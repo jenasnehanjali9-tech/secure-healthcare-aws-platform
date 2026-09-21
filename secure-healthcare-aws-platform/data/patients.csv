@@ -1,0 +1,301 @@
+patient_id,age,gender,department,region,insurance_type
+PT00001,82,M,Cardiology,North,Government
+PT00002,29,M,Neurology,East,Self-pay
+PT00003,70,M,General Medicine,South,Government
+PT00004,4,M,Orthopedics,West,Self-pay
+PT00005,78,M,General Medicine,West,Self-pay
+PT00006,84,Other,General Medicine,South,Government
+PT00007,58,Other,Pediatrics,East,Government
+PT00008,90,F,Pediatrics,North,Government
+PT00009,28,F,Cardiology,East,Private
+PT00010,13,F,Emergency,North,Self-pay
+PT00011,34,M,Neurology,South,Self-pay
+PT00012,16,F,Cardiology,Central,Private
+PT00013,81,Other,Emergency,North,Self-pay
+PT00014,25,Other,Cardiology,East,Self-pay
+PT00015,30,F,Cardiology,West,Government
+PT00016,49,F,Oncology,North,Government
+PT00017,48,F,Orthopedics,North,Self-pay
+PT00018,88,Other,Cardiology,Central,Self-pay
+PT00019,22,Other,Neurology,West,Government
+PT00020,60,F,Pediatrics,Central,Government
+PT00021,88,F,Emergency,East,Government
+PT00022,5,F,Oncology,North,Government
+PT00023,28,Other,Neurology,North,Government
+PT00024,84,F,Oncology,South,Government
+PT00025,34,M,Orthopedics,Central,Self-pay
+PT00026,34,Other,General Medicine,South,Self-pay
+PT00027,52,F,Orthopedics,West,Self-pay
+PT00028,64,M,Emergency,East,Government
+PT00029,20,Other,Orthopedics,South,Self-pay
+PT00030,9,F,Oncology,Central,Private
+PT00031,68,F,General Medicine,East,Self-pay
+PT00032,15,Other,General Medicine,North,Self-pay
+PT00033,44,M,Pediatrics,South,Government
+PT00034,59,M,Neurology,North,Self-pay
+PT00035,23,Other,Cardiology,North,Self-pay
+PT00036,65,Other,Orthopedics,West,Private
+PT00037,21,Other,Emergency,Central,Government
+PT00038,77,F,Oncology,East,Government
+PT00039,47,F,Orthopedics,East,Government
+PT00040,73,M,Cardiology,South,Government
+PT00041,69,M,Orthopedics,South,Self-pay
+PT00042,22,F,General Medicine,Central,Private
+PT00043,28,Other,Emergency,West,Self-pay
+PT00044,40,F,Neurology,North,Private
+PT00045,67,F,Cardiology,West,Government
+PT00046,9,F,Cardiology,Central,Self-pay
+PT00047,30,Other,Orthopedics,East,Government
+PT00048,81,M,Orthopedics,East,Government
+PT00049,43,M,General Medicine,West,Private
+PT00050,86,F,Orthopedics,Central,Government
+PT00051,74,Other,Oncology,West,Private
+PT00052,53,M,Cardiology,East,Self-pay
+PT00053,56,F,Oncology,South,Private
+PT00054,7,Other,Neurology,East,Government
+PT00055,52,Other,Pediatrics,East,Government
+PT00056,25,M,General Medicine,South,Government
+PT00057,55,M,Pediatrics,South,Government
+PT00058,10,F,Emergency,Central,Government
+PT00059,7,Other,General Medicine,East,Government
+PT00060,31,M,Oncology,South,Private
+PT00061,28,F,Cardiology,West,Private
+PT00062,1,F,Pediatrics,South,Private
+PT00063,55,Other,Neurology,Central,Self-pay
+PT00064,63,M,Orthopedics,North,Government
+PT00065,8,Other,Neurology,Central,Government
+PT00066,41,M,Cardiology,Central,Private
+PT00067,65,Other,Orthopedics,East,Self-pay
+PT00068,11,M,Cardiology,Central,Government
+PT00069,87,M,Oncology,East,Self-pay
+PT00070,32,Other,General Medicine,East,Self-pay
+PT00071,11,F,Neurology,Central,Self-pay
+PT00072,67,F,Pediatrics,West,Self-pay
+PT00073,41,M,Pediatrics,South,Government
+PT00074,86,Other,Pediatrics,South,Private
+PT00075,10,M,Oncology,Central,Self-pay
+PT00076,13,M,General Medicine,West,Self-pay
+PT00077,34,M,Pediatrics,East,Government
+PT00078,48,F,Orthopedics,South,Self-pay
+PT00079,39,Other,Emergency,Central,Government
+PT00080,86,Other,Pediatrics,East,Government
+PT00081,34,M,Cardiology,Central,Government
+PT00082,35,F,General Medicine,West,Self-pay
+PT00083,44,M,Neurology,North,Self-pay
+PT00084,63,F,Emergency,East,Government
+PT00085,82,F,Emergency,North,Government
+PT00086,1,F,Emergency,West,Self-pay
+PT00087,34,M,Neurology,South,Self-pay
+PT00088,55,Other,Cardiology,East,Government
+PT00089,89,M,General Medicine,East,Private
+PT00090,75,Other,Orthopedics,South,Government
+PT00091,6,F,Pediatrics,East,Private
+PT00092,27,Other,Orthopedics,East,Private
+PT00093,72,F,General Medicine,West,Government
+PT00094,21,M,Oncology,East,Government
+PT00095,43,F,Emergency,West,Private
+PT00096,21,Other,Cardiology,South,Government
+PT00097,61,M,Orthopedics,South,Private
+PT00098,40,M,Orthopedics,East,Self-pay
+PT00099,25,F,Pediatrics,North,Government
+PT00100,36,F,Neurology,Central,Private
+PT00101,87,Other,Pediatrics,East,Government
+PT00102,34,M,General Medicine,North,Government
+PT00103,14,Other,Oncology,North,Self-pay
+PT00104,41,F,General Medicine,Central,Government
+PT00105,50,Other,Orthopedics,North,Government
+PT00106,56,M,General Medicine,Central,Self-pay
+PT00107,86,M,Pediatrics,South,Government
+PT00108,86,F,General Medicine,North,Self-pay
+PT00109,16,Other,Pediatrics,Central,Private
+PT00110,86,F,Pediatrics,South,Self-pay
+PT00111,38,Other,Orthopedics,West,Private
+PT00112,86,F,Neurology,West,Self-pay
+PT00113,73,F,Oncology,Central,Government
+PT00114,39,F,Orthopedics,South,Self-pay
+PT00115,78,Other,Pediatrics,South,Private
+PT00116,57,Other,Orthopedics,Central,Private
+PT00117,22,Other,Cardiology,North,Self-pay
+PT00118,85,Other,General Medicine,North,Government
+PT00119,31,Other,Pediatrics,West,Government
+PT00120,19,M,Cardiology,West,Private
+PT00121,79,M,Oncology,South,Self-pay
+PT00122,74,M,Neurology,South,Private
+PT00123,52,M,Orthopedics,East,Government
+PT00124,55,M,Orthopedics,Central,Private
+PT00125,7,Other,Orthopedics,East,Private
+PT00126,18,F,Neurology,Central,Self-pay
+PT00127,77,F,Emergency,South,Self-pay
+PT00128,65,F,Emergency,Central,Private
+PT00129,21,Other,Emergency,South,Private
+PT00130,34,M,Emergency,North,Self-pay
+PT00131,63,Other,Orthopedics,North,Private
+PT00132,10,Other,Pediatrics,West,Private
+PT00133,43,F,General Medicine,East,Government
+PT00134,20,M,Oncology,West,Self-pay
+PT00135,28,M,Oncology,South,Private
+PT00136,70,F,Oncology,East,Government
+PT00137,54,F,Emergency,Central,Self-pay
+PT00138,3,Other,Oncology,South,Government
+PT00139,46,F,Emergency,South,Private
+PT00140,69,Other,Neurology,Central,Self-pay
+PT00141,29,F,Orthopedics,North,Private
+PT00142,63,M,Oncology,North,Self-pay
+PT00143,87,F,Neurology,West,Private
+PT00144,17,Other,General Medicine,East,Private
+PT00145,76,Other,Neurology,East,Government
+PT00146,83,F,Orthopedics,South,Government
+PT00147,7,F,Oncology,North,Government
+PT00148,59,F,Pediatrics,South,Private
+PT00149,54,F,Emergency,East,Private
+PT00150,3,Other,General Medicine,East,Private
+PT00151,29,Other,Cardiology,East,Government
+PT00152,32,M,Emergency,East,Self-pay
+PT00153,20,M,Orthopedics,South,Self-pay
+PT00154,15,Other,Orthopedics,South,Self-pay
+PT00155,33,F,Orthopedics,Central,Self-pay
+PT00156,15,M,Pediatrics,East,Self-pay
+PT00157,4,F,General Medicine,South,Private
+PT00158,26,M,General Medicine,West,Government
+PT00159,90,F,Emergency,Central,Government
+PT00160,73,M,Pediatrics,Central,Private
+PT00161,85,F,Cardiology,Central,Self-pay
+PT00162,44,M,Emergency,South,Private
+PT00163,14,F,Pediatrics,South,Self-pay
+PT00164,20,F,Orthopedics,Central,Self-pay
+PT00165,35,Other,Emergency,Central,Private
+PT00166,60,F,Emergency,Central,Private
+PT00167,42,M,Emergency,East,Private
+PT00168,58,M,Emergency,South,Self-pay
+PT00169,79,Other,Oncology,North,Government
+PT00170,64,F,Orthopedics,South,Government
+PT00171,46,F,Pediatrics,North,Self-pay
+PT00172,90,F,General Medicine,East,Self-pay
+PT00173,25,M,Orthopedics,South,Private
+PT00174,72,M,Neurology,South,Self-pay
+PT00175,63,F,Emergency,East,Government
+PT00176,38,M,Oncology,West,Private
+PT00177,85,Other,Pediatrics,South,Self-pay
+PT00178,68,F,Oncology,Central,Private
+PT00179,46,Other,Oncology,North,Private
+PT00180,33,M,Cardiology,West,Private
+PT00181,16,Other,General Medicine,West,Government
+PT00182,28,Other,Oncology,North,Self-pay
+PT00183,76,Other,General Medicine,North,Government
+PT00184,25,F,Orthopedics,North,Government
+PT00185,39,M,Neurology,Central,Government
+PT00186,36,M,Cardiology,Central,Private
+PT00187,90,M,Neurology,South,Government
+PT00188,2,Other,Pediatrics,South,Private
+PT00189,57,F,Orthopedics,East,Private
+PT00190,62,M,Emergency,East,Private
+PT00191,63,M,General Medicine,East,Government
+PT00192,20,Other,Pediatrics,East,Government
+PT00193,16,Other,Emergency,South,Self-pay
+PT00194,77,Other,Orthopedics,Central,Private
+PT00195,58,F,Pediatrics,Central,Private
+PT00196,40,Other,General Medicine,East,Self-pay
+PT00197,13,M,Neurology,West,Private
+PT00198,85,M,Orthopedics,West,Government
+PT00199,71,M,Orthopedics,East,Private
+PT00200,58,Other,General Medicine,South,Private
+PT00201,5,M,Pediatrics,North,Self-pay
+PT00202,59,M,Neurology,West,Private
+PT00203,81,Other,Neurology,West,Private
+PT00204,15,Other,Orthopedics,West,Private
+PT00205,19,M,Cardiology,West,Private
+PT00206,77,Other,Emergency,Central,Private
+PT00207,57,M,Oncology,North,Self-pay
+PT00208,52,F,General Medicine,Central,Private
+PT00209,57,M,General Medicine,East,Private
+PT00210,42,Other,Pediatrics,East,Government
+PT00211,30,Other,Emergency,Central,Self-pay
+PT00212,3,Other,Emergency,North,Self-pay
+PT00213,6,M,Oncology,Central,Self-pay
+PT00214,57,F,Orthopedics,Central,Private
+PT00215,82,F,Cardiology,South,Private
+PT00216,53,F,Pediatrics,East,Government
+PT00217,43,F,Neurology,South,Private
+PT00218,85,F,Emergency,Central,Government
+PT00219,59,M,Pediatrics,North,Private
+PT00220,15,F,Emergency,Central,Government
+PT00221,85,Other,Oncology,South,Government
+PT00222,25,Other,Pediatrics,Central,Private
+PT00223,81,F,Emergency,East,Government
+PT00224,35,Other,Orthopedics,North,Private
+PT00225,90,F,Cardiology,East,Self-pay
+PT00226,78,M,Neurology,West,Private
+PT00227,71,M,General Medicine,South,Government
+PT00228,29,M,Oncology,East,Self-pay
+PT00229,20,F,Neurology,North,Self-pay
+PT00230,35,F,Emergency,South,Private
+PT00231,32,F,General Medicine,West,Private
+PT00232,25,Other,General Medicine,West,Government
+PT00233,36,F,Pediatrics,Central,Private
+PT00234,1,F,Neurology,North,Self-pay
+PT00235,75,Other,Oncology,West,Private
+PT00236,69,F,Pediatrics,North,Self-pay
+PT00237,70,F,Oncology,North,Government
+PT00238,90,M,General Medicine,South,Government
+PT00239,53,M,Pediatrics,South,Self-pay
+PT00240,49,F,Neurology,West,Private
+PT00241,5,M,General Medicine,Central,Private
+PT00242,13,F,Cardiology,Central,Private
+PT00243,2,Other,Orthopedics,South,Self-pay
+PT00244,20,M,Oncology,North,Private
+PT00245,80,Other,Oncology,East,Private
+PT00246,87,Other,Oncology,North,Self-pay
+PT00247,63,Other,Cardiology,Central,Government
+PT00248,31,Other,Neurology,North,Government
+PT00249,12,F,Cardiology,East,Private
+PT00250,22,Other,Pediatrics,East,Government
+PT00251,42,M,Pediatrics,North,Private
+PT00252,56,M,Orthopedics,Central,Private
+PT00253,73,Other,Emergency,West,Government
+PT00254,23,M,General Medicine,South,Self-pay
+PT00255,88,M,Oncology,Central,Government
+PT00256,30,F,Neurology,North,Private
+PT00257,33,Other,Cardiology,South,Private
+PT00258,87,Other,Orthopedics,East,Private
+PT00259,45,Other,Pediatrics,South,Self-pay
+PT00260,33,F,Emergency,North,Government
+PT00261,50,F,Cardiology,West,Private
+PT00262,74,F,General Medicine,North,Self-pay
+PT00263,38,M,Emergency,South,Private
+PT00264,2,Other,Emergency,East,Self-pay
+PT00265,64,F,Emergency,West,Self-pay
+PT00266,46,M,Neurology,West,Self-pay
+PT00267,33,Other,Emergency,West,Self-pay
+PT00268,13,Other,Neurology,East,Private
+PT00269,57,M,General Medicine,North,Self-pay
+PT00270,17,M,Pediatrics,North,Self-pay
+PT00271,54,M,Orthopedics,West,Self-pay
+PT00272,47,Other,General Medicine,North,Government
+PT00273,33,F,Emergency,North,Self-pay
+PT00274,44,M,Oncology,East,Government
+PT00275,29,Other,Neurology,South,Self-pay
+PT00276,47,M,Emergency,South,Government
+PT00277,34,Other,Cardiology,South,Private
+PT00278,87,Other,Neurology,North,Self-pay
+PT00279,49,Other,Pediatrics,East,Self-pay
+PT00280,30,F,Cardiology,Central,Self-pay
+PT00281,42,Other,Orthopedics,East,Self-pay
+PT00282,60,Other,Pediatrics,South,Government
+PT00283,18,M,Cardiology,North,Private
+PT00284,15,M,Orthopedics,Central,Government
+PT00285,50,F,Pediatrics,Central,Private
+PT00286,76,Other,Neurology,West,Private
+PT00287,84,M,Emergency,South,Self-pay
+PT00288,53,F,Cardiology,North,Government
+PT00289,57,F,Orthopedics,North,Government
+PT00290,88,F,General Medicine,North,Government
+PT00291,51,F,Orthopedics,East,Private
+PT00292,12,Other,Orthopedics,Central,Government
+PT00293,7,F,Orthopedics,West,Self-pay
+PT00294,27,M,Emergency,Central,Government
+PT00295,76,M,Emergency,West,Private
+PT00296,19,Other,Cardiology,North,Government
+PT00297,17,Other,Pediatrics,West,Government
+PT00298,85,M,Orthopedics,East,Private
+PT00299,31,Other,Pediatrics,East,Government
+PT00300,34,M,Orthopedics,South,Self-pay
