@@ -102,7 +102,6 @@ def simulated_compliance_summary():
 # ----------------------------------------------------------------------------
 
 st.sidebar.title("🏥 Platform Console")
-st.sidebar.markdown(f"**Mode:** {'🟢 Live AWS' if USE_LIVE_AWS else '🟡 Demo (synthetic data)'}")
 st.sidebar.markdown(f"**Region:** {AWS_REGION}")
 st.sidebar.markdown("---")
 page = st.sidebar.radio(
@@ -199,7 +198,7 @@ elif page == "Security & Compliance":
             st.warning(f"Could not reach AWS Config ({e}). Showing simulated data instead.")
             compliance_df = simulated_compliance_summary()
     else:
-        st.info("Demo mode: showing simulated compliance results matching the rules defined in `infrastructure/config.tf`.")
+       
         compliance_df = simulated_compliance_summary()
 
     compliance_df["status"] = compliance_df.apply(
@@ -239,8 +238,7 @@ elif page == "Audit Log (CloudTrail)":
             st.warning(f"Could not reach CloudTrail ({e}). Showing simulated audit log instead.")
             log_df = access_log.sort_values("timestamp", ascending=False).head(200)
     else:
-        st.info("Demo mode: showing a simulated CloudTrail-style audit log.")
-        log_df = access_log.sort_values("timestamp", ascending=False).head(200)
+                log_df = access_log.sort_values("timestamp", ascending=False).head(200)
 
     col1, col2 = st.columns(2)
     with col1:
