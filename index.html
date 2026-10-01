@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Secure Healthcare Data Platform — AWS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0B2027;
+    --paper:#F5F6F2;
+    --surface:#FFFFFF;
+    --teal:#2F6F62;
+    --teal-deep:#1D4A40;
+    --gold:#B98900;
+    --line:#D7DBD3;
+    --muted:#55625F;
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--teal-deep);}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 28px;}
+  section{padding:76px 0;}
+  .hairline{border-top:1px solid var(--line);}
+
+  /* ---------- top bar ---------- */
+  .topbar{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:22px 0;
+  }
+  .brand{
+    font-family:var(--mono);
+    font-size:14px;
+    letter-spacing:0.02em;
+    color:var(--teal-deep);
+  }
+  .topnav a{
+    font-size:14px;color:var(--ink);text-decoration:none;margin-left:28px;
+  }
+  .topnav a:hover{color:var(--teal-deep);}
+
+  /* ---------- hero ---------- */
+  .hero{padding-top:40px;padding-bottom:56px;}
+  .hero-tag{
+    font-size:14px;color:var(--muted);margin-bottom:18px;
+  }
+  .hero h1{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:clamp(34px,5vw,56px);
+    line-height:1.12;
+    margin:0 0 22px;
+    max-width:15ch;
+  }
+  .hero p.lede{
+    font-size:19px;
+    color:var(--muted);
+    max-width:56ch;
+    margin:0 0 34px;
+  }
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;
+    padding:13px 22px;
+    font-family:var(--sans);
+    font-size:15px;
+    font-weight:500;
+    text-decoration:none;
+    border:1px solid var(--ink);
+    color:var(--ink);
+  }
+  .btn-solid{background:var(--teal-deep);border-color:var(--teal-deep);color:#fff;}
+  .btn-solid:hover{background:var(--ink);border-color:var(--ink);}
+  .btn-outline:hover{background:var(--ink);color:#fff;}
+
+  /* ---------- quick facts ---------- */
+  .facts{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .fact{
+    padding:24px 20px;
+    border-left:1px solid var(--line);
+  }
+  .fact:first-child{border-left:none;}
+  .fact .n{font-family:var(--serif);font-size:30px;font-weight:600;}
+  .fact .l{font-size:13.5px;color:var(--muted);margin-top:4px;}
+
+  /* ---------- section heads ---------- */
+  .kicker{
+    font-family:var(--mono);font-size:13px;color:var(--teal-deep);margin-bottom:10px;
+  }
+  h2{
+    font-family:var(--serif);font-weight:600;font-size:30px;margin:0 0 18px;
+  }
+  .lead-text{color:var(--muted);max-width:62ch;font-size:16.5px;}
+
+  /* ---------- why section ---------- */
+  .why-grid{
+    display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:start;margin-top:30px;
+  }
+  .why-grid ul{margin:0;padding:0;list-style:none;}
+  .why-grid li{
+    padding:16px 0;border-top:1px solid var(--line);font-size:15.5px;
+  }
+  .why-grid li b{display:block;font-weight:600;margin-bottom:3px;}
+
+  /* ---------- architecture schematic ---------- */
+  .schema{
+    margin-top:34px;
+    border:1px solid var(--line);
+    background:var(--surface);
+    padding:32px;
+  }
+  .schema-row{
+    display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between;
+  }
+  .schema-row + .schema-flow{margin:14px 0;text-align:center;color:var(--muted);font-family:var(--mono);font-size:13px;}
+  .node{
+    flex:1 1 0;
+    min-width:150px;
+    border:1px solid var(--line);
+    padding:16px 16px 14px;
+  }
+  .node .role{font-size:13px;color:var(--muted);margin-bottom:4px;}
+  .node .name{font-weight:600;font-size:15px;}
+  .node .id{font-family:var(--mono);font-size:12px;color:var(--teal-deep);margin-top:6px;}
+  .node.locked{border-color:var(--gold);}
+  .node.locked .name::after{content:" 🔒";font-size:12px;}
+  .side-note{
+    margin-top:22px;padding-top:18px;border-top:1px dashed var(--line);
+    font-size:14px;color:var(--muted);
+  }
+  .side-note b{color:var(--ink);}
+
+  /* ---------- compliance table ---------- */
+  table{width:100%;border-collapse:collapse;margin-top:28px;font-size:14.5px;}
+  th,td{text-align:left;padding:12px 14px;border-top:1px solid var(--line);vertical-align:top;}
+  th{font-family:var(--sans);font-weight:600;font-size:13px;color:var(--muted);}
+  td.ref{font-family:var(--mono);font-size:12.5px;color:var(--teal-deep);white-space:nowrap;}
+
+  /* ---------- stack strip ---------- */
+  .stack{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;}
+  .chip{
+    font-family:var(--mono);font-size:13px;
+    border:1px solid var(--line);padding:8px 14px;background:var(--surface);
+  }
+
+  /* ---------- footer ---------- */
+  footer{padding:54px 0 70px;}
+  .footer-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;}
+  .footer-note{font-size:13.5px;color:var(--muted);max-width:44ch;}
+  .footer-links a{display:block;font-size:14px;margin-bottom:8px;}
+
+  @media (max-width:760px){
+    .facts{grid-template-columns:repeat(2,1fr);}
+    .fact:nth-child(3){border-left:none;}
+    .why-grid{grid-template-columns:1fr;gap:20px;}
+    .schema-row{flex-direction:column;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="topbar">
+    <div class="brand">secure-healthcare-aws-platform</div>
+    <nav class="topnav">
+      <a href="#architecture">Architecture</a>
+      <a href="#security">Security</a>
+      <a href="#stack">Stack</a>
+      <a href="https://github.com/jenasnehanjali9-tech/secure-healthcare-aws-platform">GitHub</a>
+    </nav>
+  </div>
+</div>
+
+<div class="wrap hero">
+  <div class="hero-tag">Student project — cloud security &amp; data analytics</div>
+  <h1>A secure home for healthcare data, built on AWS.</h1>
+  <p class="lede">Aurora, S3, KMS, IAM, AWS Config, and CloudTrail working together so patient records stay encrypted, access stays limited to the people who need it, and every action is logged.</p>
+  <div class="cta-row">
+    <a class="btn btn-solid" href="#">Open the dashboard</a>
+    <a class="btn btn-outline" href="https://github.com/jenasnehanjali9-tech/secure-healthcare-aws-platform">View the code</a>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="facts">
+    <div class="fact"><div class="n">6</div><div class="l">AWS services integrated</div></div>
+    <div class="fact"><div class="n">3</div><div class="l">least-privilege IAM roles</div></div>
+    <div class="fact"><div class="n">9</div><div class="l">continuous compliance rules</div></div>
+    <div class="fact"><div class="n">2</div><div class="l">customer-managed encryption keys</div></div>
+  </div>
+</div>
+
+<div class="wrap">
+<section>
+  <div class="kicker">Why it's built this way</div>
+  <h2>Healthcare data can't be treated like ordinary data.</h2>
+  <p class="lead-text">A patient record carries weight an ordinary row of data doesn't — it needs to stay private, stay accurate, and stay traceable. This project treats those three needs as infrastructure, not afterthoughts.</p>
+  <div class="why-grid">
+    <ul>
+      <li><b>Encrypt everything at rest.</b> Aurora storage and S3 objects are encrypted with customer-managed KMS keys, so the data is unreadable without the right key — even if the storage itself were exposed.</li>
+      <li><b>Limit who can see what.</b> A clinician, an analyst, and an administrator each get exactly the access their job requires — nothing more.</li>
+      <li><b>Watch for drift.</b> AWS Config checks the account continuously, catching things like a bucket accidentally made public before it becomes a problem.</li>
+    </ul>
+    <ul>
+      <li><b>Log every action.</b> CloudTrail records who did what and when, across every region, with tamper-evident log validation.</li>
+      <li><b>Separate duties.</b> The administrator who manages the infrastructure is explicitly denied access to read actual patient records.</li>
+      <li><b>Keep analytics honest.</b> Analysts work from a de-identified copy of the data — never the raw patient-identifiable source.</li>
+    </ul>
+  </div>
+</section>
+</div>
+
+<div class="wrap hairline" id="architecture">
+<section>
+  <div class="kicker">Architecture</div>
+  <h2>How a request moves through the system</h2>
+  <p class="lead-text">Three personas, each routed through an IAM role scoped to exactly what they need — with encryption, monitoring, and logging wrapped around all of it.</p>
+
+  <div class="schema">
+    <div class="schema-row">
+      <div class="node"><div class="role">User</div><div class="name">Clinician</div></div>
+      <div class="node"><div class="role">User</div><div class="name">Analyst</div></div>
+      <div class="node"><div class="role">User</div><div class="name">Admin</div></div>
+    </div>
+    <div class="schema-flow">↓ assumes role (MFA required) ↓</div>
+    <div class="schema-row">
+      <div class="node"><div class="role">IAM role</div><div class="name">clinician-role</div><div class="id">rds-db:connect</div></div>
+      <div class="node"><div class="role">IAM role</div><div class="name">analyst-role</div><div class="id">s3:GetObject (analytics/)</div></div>
+      <div class="node"><div class="role">IAM role</div><div class="name">admin-role</div><div class="id">infra only — PHI read denied</div></div>
+    </div>
+    <div class="schema-flow">↓</div>
+    <div class="schema-row">
+      <div class="node locked"><div class="role">Private subnet</div><div class="name">Aurora PostgreSQL</div><div class="id">storage_encrypted = true</div></div>
+      <div class="node locked"><div class="role">S3 prefix</div><div class="name">raw-phi/</div><div class="id">locked down</div></div>
+      <div class="node locked"><div class="role">S3 prefix</div><div class="name">analytics/</div><div class="id">de-identified</div></div>
+    </div>
+    <div class="side-note">
+      <b>KMS</b> encrypts all three of the boxes above, plus CloudTrail's own logs, using two separate keys. <b>AWS Config</b> continuously evaluates all of it against 9 rules. <b>CloudTrail</b> logs every call across every region and raises a CloudWatch alarm if the account's root user is ever used.
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="wrap hairline" id="security">
+<section>
+  <div class="kicker">Security &amp; compliance</div>
+  <h2>Mapped to the HIPAA Security Rule</h2>
+  <p class="lead-text">Each safeguard below is a specific, inspectable piece of configuration — not just a policy statement.</p>
+  <table>
+    <tr><th>Safeguard</th><th>How it's implemented</th><th>Reference</th></tr>
+    <tr><td>Encryption at rest</td><td>KMS customer-managed keys on Aurora, S3, and CloudTrail logs</td><td class="ref">§164.312(a)(2)(iv)</td></tr>
+    <tr><td>Encryption in transit</td><td>Aurora enforces TLS; S3 bucket policy denies any non-HTTPS request</td><td class="ref">§164.312(e)(1)</td></tr>
+    <tr><td>Access control</td><td>Three IAM roles, least privilege, explicit deny statements</td><td class="ref">§164.312(a)(1)</td></tr>
+    <tr><td>Audit controls</td><td>Multi-region CloudTrail with log file integrity validation</td><td class="ref">§164.312(b)</td></tr>
+    <tr><td>Authentication</td><td>MFA required to assume any role; 14-character account password policy</td><td class="ref">§164.312(d)</td></tr>
+    <tr><td>Integrity controls</td><td>S3 object versioning; CloudTrail log validation digests</td><td class="ref">§164.312(c)(1)</td></tr>
+  </table>
+</section>
+</div>
+
+<div class="wrap hairline" id="stack">
+<section>
+  <div class="kicker">Built with</div>
+  <h2>Infrastructure as code, start to finish</h2>
+  <p class="lead-text">Every resource below is provisioned by Terraform — nothing was clicked together by hand in the AWS Console.</p>
+  <div class="stack">
+    <span class="chip">Terraform</span>
+    <span class="chip">Amazon Aurora (PostgreSQL)</span>
+    <span class="chip">Amazon S3</span>
+    <span class="chip">AWS KMS</span>
+    <span class="chip">AWS IAM</span>
+    <span class="chip">AWS Config</span>
+    <span class="chip">AWS CloudTrail</span>
+    <span class="chip">Amazon VPC</span>
+    <span class="chip">Streamlit</span>
+    <span class="chip">Python</span>
+  </div>
+</section>
+</div>
+
+<div class="wrap hairline">
+<footer>
+  <div class="footer-grid">
+    <div class="footer-note">
+      All patient data used in the demo dashboard is synthetically generated. No real protected health information is stored or displayed anywhere in this project.
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/jenasnehanjali9-tech/secure-healthcare-aws-platform">GitHub repository</a>
+      <a href="#">Live dashboard</a>
+      <a href="#architecture">Architecture detail</a>
+    </div>
+  </div>
+  <div class="footer-note" style="margin-top:28px;">
+    Built by Snehanjali Jena — BCA in Data Analytics, Centurion University of Technology and Management (CUTM).
+  </div>
+</footer>
+</div>
+
+</body>
+</html>
